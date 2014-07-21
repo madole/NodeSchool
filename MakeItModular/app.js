@@ -5,10 +5,12 @@ var filter = process.argv[3];
 
 filterDirectory(pathName, filter, function(err, data) {
 	if(err) {
-		console.log('Something went wrong!');
+		console.log(err);
 		return; 
 	}
-	console.log(data.join());
+	for(var i in data) {
+		console.log(data[i]);
+	}
 
 
 });
